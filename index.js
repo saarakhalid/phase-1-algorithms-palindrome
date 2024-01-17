@@ -1,28 +1,25 @@
+// index.js
+
+// Function to check if a word is a palindrome
 function isPalindrome(word) {
-  // Write your algorithm here
-  function isPalindrome(word) {
-    // Convert the input word to lowercase and remove spaces and special characters
-    const cleanedWord = word.toLowerCase().replace(/[^a-z]/g, '');
-  
-    // Create a reversed version of the cleaned word
-    const reversedWord = cleanedWord.split('').reverse().join('');
-  
-    // Compare the cleaned word with its reversed version
-    return cleanedWord === reversedWord;
-  }
-  
-  // Custom tests
-  console.log("Expecting: true");
-  console.log("=>", isPalindrome("racecar"));
-  
-  console.log("");
-  
-  console.log("Expecting: false");
-  console.log("=>", isPalindrome("robot"));
-  
-  module.exports = isPalindrome;
-  
+  // Convert the input word to lowercase and remove spaces and special characters
+  const cleanedWord = word.toLowerCase().replace(/[^a-z]/g, '');
+
+  // Create a reversed version of the cleaned word
+  const reversedWord = cleanedWord.split('').reverse().join('');
+
+  // Compare the cleaned word with its reversed version
+  return cleanedWord === reversedWord;
 }
+
+// You can add your own custom tests here
+console.log("Expecting: true");
+console.log("=>", isPalindrome("racecar"));
+
+console.log("");
+
+console.log("Expecting: false");
+console.log("=>", isPalindrome("robot"));
 
 /* 
   Add your pseudocode here
@@ -41,16 +38,17 @@ function isPalindrome(word) {
 
 */
 
+// Export the isPalindrome function
+module.exports = isPalindrome;
+
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
-  console.log("=>", isPalindrome("racecar"));
+  console.log("=>", isPalindrome("level"));
 
   console.log("");
 
   console.log("Expecting: false");
-  console.log("=>", isPalindrome("robot"));
+  console.log("=>", isPalindrome("hello"));
 }
-
-module.exports = isPalindrome;
